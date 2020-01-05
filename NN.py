@@ -81,7 +81,7 @@ if __name__ == "__main__":
     classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
     model = Net(300, 150).to(device)
-    #uncomment below to test
+    #comment below to test
     model = train(model, trainloader, 500, 0.001)
     torch.save(model.state_dict(), 'final.pth')
     files.download('final.pth')
