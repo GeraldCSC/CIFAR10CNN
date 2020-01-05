@@ -64,7 +64,7 @@ def test(model, loader):
     print("test accuracy: " + str(correct/total))
 
 if __name__ == "__main__":
-    batchsize = 60000
+    batchsize = 50000
     transform = transforms.Compose(
         [transforms.ToTensor(),
          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
