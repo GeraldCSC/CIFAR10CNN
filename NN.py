@@ -84,7 +84,6 @@ if __name__ == "__main__":
     #comment below to test
     model = train(model, trainloader, 2000, 0)
     torch.save(model.state_dict(), 'final.pth')
-    files.download('final.pth')
     #toload the model
     #state_dict = torch.load('final.pth')
     #model.load_state_dict(state_dict)
