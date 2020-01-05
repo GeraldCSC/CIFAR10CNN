@@ -82,7 +82,7 @@ if __name__ == "__main__":
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
     model = Net(300, 150).to(device)
     #comment below to test
-    model = train(model, trainloader, 500, 0.001)
+    model = train(model, trainloader, 2000, 0)
     torch.save(model.state_dict(), 'final.pth')
     files.download('final.pth')
     #toload the model
