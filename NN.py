@@ -78,16 +78,7 @@ if __name__ == "__main__":
                                            download=True, transform=transform)
     testloader = torch.utils.data.DataLoader(testset, batch_size=batchsize,
                                              shuffle=False)
-    classes = ('plane', 'car', 'bird', 'cat',
-           'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
     model = Net(300, 150).to(device)
-    #comment below to test
     model = train(model, trainloader, 2000, 0)
-    torch.save(model.state_dict(), 'final.pth')
-    #toload the model
-    #state_dict = torch.load('final.pth')
-    #model.load_state_dict(state_dict)
-    
-    #will run this after tuning hyperparameters using our train set via K fold
-    #test(model,testloader)
+    test(model,testloader)
 
